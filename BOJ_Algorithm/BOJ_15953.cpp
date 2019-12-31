@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+void solve();
+
+int main()
+{
+	int t;
+	scanf("%d", &t);
+
+	for (int i = 0; i < t; i++)
+		solve();
+
+	return 0;
+}
+
+void solve()
+{
+	int a, b, sum = 0;
+
+	scanf("%d %d", &a, &b);
+
+	if (a == 1)
+		sum += 5000000;
+	else if (a > 1 && a <= 3)
+		sum += 3000000;
+	else if (a > 3 && a <= 6)
+		sum += 2000000;
+	else if (a > 6 && a <= 10)
+		sum += 500000;
+	else if (a > 10 && a <= 15)
+		sum += 300000;
+	else if (a > 15 && a <= 21)
+		sum += 100000;
+	else
+		sum += 0;
+
+	if (b == 1)
+		sum += 5120000;
+	else if (b > 1 && b <= 3)
+		sum += 2560000;
+	else if (b > 3 && b <= 7)
+		sum += 1280000;
+	else if (b > 7 && b <= 15)
+		sum += 640000;
+	else if (b > 15 && b <= 31)
+		sum += 320000;
+	else
+		sum += 0;
+
+	printf("%d\n", sum);
+}
